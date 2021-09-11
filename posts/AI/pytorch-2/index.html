@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<script src="//cdn.jsdelivr.net/gh/zzzsyyy/zzzsyyy/CDN/instant.page@5.1.0.js" type="module"></script>
+<script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
+
+<title>NLP 基础补充 | CRI@ÉCPKN</title>
+<link rel="stylesheet" href="https://sino-crdc.github.io/css/eureka.min.css">
+<script defer src="https://sino-crdc.github.io/js/eureka.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
+     media="print"
+    onload="this.media='all';this.onload=null" crossorigin>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"
+     crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+     integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+    });
+  });
+</script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://sino-crdc.github.io/images/icon_hu02c3d024ede12c2cfaabed7f8e0fb2e9_41387_32x32_fill_box_center_2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://sino-crdc.github.io/images/icon_hu02c3d024ede12c2cfaabed7f8e0fb2e9_41387_180x180_fill_box_center_2.png">
+
+<meta name="description"
+  content="根据塞尔认知哲学的观点，语言智能是思维智能的基础，所以个人认为 NLP 在人工智能领域的重要性是要强于 CV 的。
+已经学过的 NLP 的重要模型有循环神经网络(LSTM、GRU)等，但这些都是传统的基础模型，现阶段的 NLP 离不开 attention 机制，或者说离不开 Transformer. 因为 NLP 目前 SOTA(state-of-the-art) 的模型，如 BERT、GPT-3 等，都是基于 Transformer 的。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"笔记",
+      "item":"https://sino-crdc.github.io/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"NLP 基础补充",
+      "item":"https://sino-crdc.github.io/posts/AI/pytorch-2/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://sino-crdc.github.io/posts/AI/pytorch-2/"
+    },
+    "headline": "NLP 基础补充 | CRI@ÉCPKN","datePublished": "2021-01-22T00:00:00+00:00",
+    "dateModified": "2021-01-31T00:00:00+00:00",
+    "wordCount":  2801 ,
+    "author": {
+        "@type": "Person",
+        "name": ["ZenMoore"]
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "CRI",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://sino-crdc.github.io/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003e根据塞尔认知哲学的观点，语言智能是思维智能的基础，所以个人认为 NLP 在人工智能领域的重要性是要强于 CV 的。\u003c\/p\u003e\n\u003cp\u003e已经学过的 NLP 的重要模型有循环神经网络(LSTM、GRU)等，但这些都是传统的基础模型，现阶段的 NLP 离不开 attention 机制，或者说离不开 Transformer. 因为 NLP 目前 SOTA(state-of-the-art) 的模型，如 BERT、GPT-3 等，都是基于 Transformer 的。\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="NLP 基础补充 | CRI@ÉCPKN" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://sino-crdc.github.io/images/icon.png">
+
+
+<meta property="og:url" content="https://sino-crdc.github.io/posts/AI/pytorch-2/" />
+
+
+
+
+<meta property="og:description" content="根据塞尔认知哲学的观点，语言智能是思维智能的基础，所以个人认为 NLP 在人工智能领域的重要性是要强于 CV 的。
+已经学过的 NLP 的重要模型有循环神经网络(LSTM、GRU)等，但这些都是传统的基础模型，现阶段的 NLP 离不开 attention 机制，或者说离不开 Transformer. 因为 NLP 目前 SOTA(state-of-the-art) 的模型，如 BERT、GPT-3 等，都是基于 Transformer 的。" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="CRI@ÉCPKN" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2021-01-22T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2021-01-31T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="NLP" />
+
+<meta property="article:tag" content="attention" />
+
+<meta property="article:tag" content="pytorch" />
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/posts/AI/pytorch-3/" />
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/posts/AI/pytorch-1/" />
+
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">CRI@ÉCPKN</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">文章</a>
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于</a>
+            <a href="/projects/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">项目</a>
+            <a href="/others/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">其他</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka">Auto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            switchMode('Auto')
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script></div>        
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">NLP 基础补充</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-01-22</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-book-open mr-1"></i>
+        <span>2801字</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>6分钟</span>
+    </div>
+
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="https://sino-crdc.github.io/series/AI/" class="hover:text-eureka">AI</a>
+        
+    </div>
+    
+
+</div>
+        
+        
+        
+
+        <div class="content">
+            <p>根据塞尔认知哲学的观点，语言智能是思维智能的基础，所以个人认为 NLP 在人工智能领域的重要性是要强于 CV 的。</p>
+<p>已经学过的 NLP 的重要模型有循环神经网络(LSTM、GRU)等，但这些都是传统的基础模型，现阶段的 NLP 离不开 attention 机制，或者说离不开 Transformer. 因为 NLP 目前 SOTA(state-of-the-art) 的模型，如 BERT、GPT-3 等，都是基于 Transformer 的。</p>
+<h2 id="写在前面">写在前面</h2>
+<p>根据塞尔认知哲学的观点，语言智能是思维智能的基础，所以个人认为 NLP 在人工智能领域的重要性是要强于 CV 的。</p>
+<p>已经学过的 NLP 的重要模型有循环神经网络(LSTM、GRU)等，但这些都是传统的基础模型，现阶段的 NLP 离不开 attention 机制，或者说离不开 Transformer. 因为 NLP 目前 SOTA(state-of-the-art) 的模型，如 BERT、GPT-3 等，都是基于 Transformer 的。</p>
+<p>因此，这里重点介绍 Transformer —— 一种自注意力机制的序列到序列模型。</p>
+<p>要介绍 Transformer, 就需要介绍它的基础——attention (注意力机制)，因为提出 Transformer 的那篇论文叫做《Attention is All You Need》，真的是非常的嚣张啊！</p>
+<p>然后，我们从序列到序列模型(Seq2Seq)出发, 引出 Transformer 的介绍。</p>
+<h2 id="attention-机制">Attention 机制</h2>
+<h3 id="为什么提出-attention-">为什么提出 attention ?</h3>
+<p>由于算力限制，不可能同时处理全部的信息，就像人不可能同时注意到环境中的全部信息一样，因此要<strong>有权重的对信息进行选择</strong>。</p>
+<p>与卷积不同，注意力(attention)是对人类聚焦式注意力的建模，而卷积是对人类显著式注意力的建模。</p>
+<blockquote>
+<p>显著式注意力：不依赖于任务，例如在一片白色中出现一个黑点，人们会自然而然地注意到这个黑点</p>
+<p>聚焦式注意力：依赖于任务，例如在做阅读理解题目时候，我们更关注和题目相关的内容</p>
+</blockquote>
+<h3 id="attention-是怎么运算的">attention 是怎么运算的？</h3>
+<ol>
+<li>注意力分布计算：用来计算对什么信息(数据)给予多少注意力(权重)，即注意力的分布函数。</li>
+</ol>
+<p>设：输入向量 $x=[x_1,&hellip;,x_N]$，查询向量 $q$ (根据任务给定，可以是动态生成的，也可以是 trainable 的)</p>
+<p>注意力分布 (对第 $i$ 个输入给予的权重(即比例)，权重和为 1) $\alpha_i=softmax(s(x_i,q))=\frac{exp(s(x_i,q))}{\sum_{j=1}^{N}{exp(s_j,q)}}$</p>
+<p>其中，$s(·，·)$ 为打分函数，用来表示输入向量和查询向量的匹配度，它有四种形式，从中选择一种：加性模型、点积模型、缩放点积模型、双线性模型。</p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/2cbbdddadd915e286f923c19b4c589c7.png" alt="img" style="zoom: 80%;" /></p>
+<ol start="2">
+<li>根据注意力分布计算经过注意力分配后的输入(聚合信息)</li>
+</ol>
+<p>有五种计算方式：</p>
+<p>比较简单的两种：</p>
+<ul>
+<li>软性注意力: $att(x,q)=\sum_{i=1}^N{\alpha_ix_i}$ (加权平均)</li>
+<li>硬性注意力: $att(x,q)=x_j\ \ where\  j=argmax_{i=1}^N{\alpha_i}$ (最大采样)或者在注意力分布式上进行随机采样(即根据$x_i$的概率$\alpha_i$采样)</li>
+</ul>
+<p><strong>重点是键值对注意力和多头注意力</strong>：</p>
+<p>键值对 (K,V) 的键 K 用来计算 $\alpha_i$, 值 V 用来计算聚合信息，也就是说， 软/硬性注意力是根据输入 $x$ 计算对输入 $x$ 应该赋予的注意力分布，而键值对注意力是根据键 K 计算对值 V 应该赋予的注意力分布</p>
+<ul>
+<li>键值对注意力：$att((K,V),q)=\sum_{i=1}^N{\frac{exp(s(k_i,q))}{\sum_j{exp(s(k_j,q))}}v_i}$</li>
+</ul>
+<p>多头注意力的头是指查询向量，多个查询向量分别表示不同的任务，用$Q=[q_1,&hellip;,q_M]$表示，每个查询向量关注输入信息的不同部分</p>
+<ul>
+<li>多头注意力：$att((K,V),Q)=att((K,V),q_1)\oplus&hellip;\oplus att((K,V),q_M)$</li>
+</ul>
+<p>$\oplus\ is\ concat\ operation$</p>
+<p>以上的注意力都是没有结构，实际上还可以使用图结构或者层次结构设计结构化的注意力分布</p>
+<ul>
+<li>结构化注意力：略</li>
+</ul>
+<h3 id="self-attention-vs-attention-">self-attention v.s. attention ?</h3>
+<p>下面再介绍一种具体的注意力模型，非常重要！自注意力模型！</p>
+<p>自注意力模型也是一种注意力模型，但是需要满足下面几个条件：</p>
+<ol>
+<li>使用键值对注意力 (KQV 模型)</li>
+<li>K、Q、V 分别使用下式计算</li>
+</ol>
+<p>$K=W_KX, Q=W_QX, V=W_VX$, 其中 X 为输入序列，三个 W 为可训练的参数。</p>
+<p>需要指出的是：如果使用缩放点积模型 (dot product) 作为打分函数，那么：</p>
+<p>$self-att(Q,K,V)=Vsoftmax(\frac{K^TQ}{\sqrt{d_k}})\ where\  K\in\Bbb{R^{d_k\times N}}\ with\ N\ the\ length\ of\ X$</p>
+<blockquote>
+<p>自注意力模型的“自”就表示“由 X 自己的线性组合生成K、Q、V”
+自注意力模型可以作为神经网络的一层来使用
+网上说，自注意力是 K=Q=V，个人感觉显然不对。</p>
+</blockquote>
+<h2 id="seq2seq-模型">Seq2Seq 模型</h2>
+<p>序列到序列模型，也就是输入是一个序列，输出是一个序列，例如：机器翻译、问答系统等。</p>
+<h3 id="句子的数学表达">句子的数学表达</h3>
+<p>首先我们有一个词表文件 V, 用来存储自然语言中的所有词语，所以，|V|非常的大，它是几万甚至几十万。这个词表中的词汇是有顺序编号的，例如：“阿斗”(词表第一个词)编号为1，“做作”(词表最后一个词)编号为664320，那么，“阿斗”的数学表达就是向量$
+<a href="%e9%95%bf%e5%ba%a6%e4%b8%ba664320">1,0,0,&hellip;,0</a>$, “做作”的数学表达就是$[0,0,0,&hellip;,1]$. 这个向量就叫做词汇的<strong>嵌入</strong>向量表示(embedding).</p>
+<p><code>广义的 embedding 为能表示一个文本信息的向量或者张量(即文本的表示)，例如，经过编码器处理后的信息(如可以在编码器中聚合语法信息等)，也可以叫做文本的 embedding,只不过这个表示人类看不懂，只有人工智能可以看懂，也叫高层语义表示。</code></p>
+<h3 id="seq2seq-的目标函数">Seq2Seq 的目标函数</h3>
+<p>设输入 $x=x_{1:S}$, 输出 $y=y_{1:T}$</p>
+<p>$p_\theta$为参数为$\theta$的概率模型，这个概率模型的参数通过数据集的样本统计分析而得(参数估计问题)，我们希望数据集样本数据出现的概率尽可能大，因此：</p>
+<p>目标函数为：$p_\theta(y_{1:T}|x_{1:S})=\prod_{t=1}^T{p_\theta(y_t|y_{1:(t-1)}, x_{1:S})}$</p>
+<p>给定数据集：${(x_{S_n},y_{T_n})}_{n=1}^N$</p>
+<p>采用<strong>最大对数似然估计</strong>：$max_\theta\sum_{n=1}^Nlog\ p_\theta(y_{1:T_n}|x_{1:S_n})$ 估计参数$\theta$</p>
+<h3 id="seq2seq-的生成">Seq2Seq 的生成</h3>
+<p>训练完成得到模型参数$\theta$后，如果给定一个输入序列x，根据下式计算输出序列</p>
+<p>$\hat{y}=argmax_y{p_\theta(y|x)}$</p>
+<h3 id="seq2seq-的模型">Seq2Seq 的模型</h3>
+<p>那么，$p_\theta$是什么呢？它就是一个深度学习模型！</p>
+<p>有以下三种：最重要的是基于自注意力的模型。</p>
+<ol>
+<li>
+<p>编码器-解码器模型(Encoder-Decoder)</p>
+<p>之前介绍循环神经网络 RNN 的时候有介绍过，结构示意图如下：</p>
+</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20201101112229127.png" alt="img" style="zoom:80%;" /></p>
+<ol start="2">
+<li>基于注意力的模型：在解码过程的第t步时，用上一步t-1的隐状态作为查询向量，从所有输入序列的隐状态中选择相关信息。</li>
+<li><strong>基于自注意力的模型</strong>：Transformer</li>
+</ol>
+<h2 id="transformer">Transformer</h2>
+<p>好了，终于到了大名鼎鼎的 Transformer ！</p>
+<h3 id="自注意力模型">自注意力模型</h3>
+<p>见上面 self-attention v.s. attention ? 部分</p>
+<p>这里设输入序列为 H.</p>
+<h3 id="多头自注意力">多头自注意力</h3>
+<p>$MultiHead(H)=W_O[head_1;&hellip;;head_M]$</p>
+<p>$head_m=self-att(Q_m,K_m,V_m)$</p>
+<p>$\forall{m\in{1,&hellip;,M}}, Q_m =W_Q^mH,K_m =W_K^mH,V_m =W_V^mH,$</p>
+<p>也就是说，查询向量有 M 个！</p>
+<p><code>注意和上面第二节的多头注意力进行比对！</code></p>
+<h3 id="位置编码">位置编码</h3>
+<p>自注意力模型忽略了输入序列中词汇的位置信息，因此需要加入位置编码来修正。</p>
+<p>设输入序列 $H^{(0)}=[e_{x_1}+p_1, &hellip;, e_{x_T}+p_T]\ with\ e_{x_t}\ the\ embedding\ vector, p_t\ the\ positional\ encoding$</p>
+<p>$p_t$ 可以作为可学习的参数，也可以预定义：
+$p_{t,2i}=sin(t/10000^{2i/d})$</p>
+<p>$p_{t,2i+1}=cos(t/10000^{2i/d})$</p>
+<p>表示第t个位置的编码向量的第2i维，d是编码向量的维度</p>
+<h3 id="编码器-encoder">编码器 (Encoder)</h3>
+<p>第一个运算：层归一化 (layer normalization)</p>
+<p>$Z^{(l)}=norm(H^{(l-1)}+MultiHead(H^{(l-1)}))$</p>
+<p>第二个运算：逐位置的前馈神经网络</p>
+<p>$FNN(z)=W_2ReLu(W_1z+b_1)+b_2$</p>
+<p>第三个运算：层归一化</p>
+<p>$H^{(l)}=norm(Z^{(l)}+FFN(Z^{(l)}))$</p>
+<h3 id="解码器-decoder">解码器 (Decoder)</h3>
+<p>第一个模块：Masked Multi-Head Attention</p>
+<p>理想状况是，使用自注意力模型对已生成的前缀序列 $y_{1:(t-1)}$进行编码得到 $H^d=[h_1^d,&hellip;,h_{(t-1)}^d]$. 但由于在训练时，解码器的输入为整个目标序列，这时可以通过一个掩码(Mask)来选择特定长度的序列。</p>
+<p>第二个模块：解码器到编码器注意力模块：使用$h_{(t-1)}^d$作为查询向量，通过注意力机制从输入序列$H^e$中选取有用的信息。</p>
+<p>第三个模块：逐位置的前馈神经网络</p>
+<h3 id="完整模型">完整模型</h3>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://sino-crdc.github.io/tags/NLP/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#NLP</a>
+    
+    <a href="https://sino-crdc.github.io/tags/attention/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#attention</a>
+    
+    <a href="https://sino-crdc.github.io/tags/pytorch/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#pytorch</a>
+    
+</div>
+        
+        
+        
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://sino-crdc.github.io/authors/ZenMoore/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://sino-crdc.github.io/avatar/example.png" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://sino-crdc.github.io/authors/ZenMoore/" class="block font-bold text-lg pb-1 mb-2 border-b">ZenMoore</a>
+            <span class="block pb-2">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.</span>
+            
+            
+            
+            
+            
+            <a href="mailto:example@example.com" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://example.com/" class="mr-1">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://example.com/" class="mr-1">
+                <i class="fab fa-github"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://sino-crdc.github.io/posts/Miniprogram/mnp-1/" class="block">微信小程序｜基础</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://sino-crdc.github.io/posts/AI/pytorch-3/" class="block">Tensorboardx 可视化</a>
+        
+    </div>
+</div>
+
+        
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+<div class="bg-secondary-bg rounded p-6">
+    <h3 class="text-lg font-semibold mb-4">系列文章</h3>
+    <div class="content">
+        
+        
+        <a href="https://sino-crdc.github.io/posts/AI/pytorch-2/">NLP 基础补充</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/posts/AI/pytorch-3/">Tensorboardx 可视化</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/posts/AI/pytorch-1/">模型载存、Datasets 和 数据预处理</a>
+        <br />
+        
+        
+    </div>
+</div>
+        
+        
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#写在前面">写在前面</a></li>
+    <li><a href="#attention-机制">Attention 机制</a>
+      <ul>
+        <li><a href="#为什么提出-attention-">为什么提出 attention ?</a></li>
+        <li><a href="#attention-是怎么运算的">attention 是怎么运算的？</a></li>
+        <li><a href="#self-attention-vs-attention-">self-attention v.s. attention ?</a></li>
+      </ul>
+    </li>
+    <li><a href="#seq2seq-模型">Seq2Seq 模型</a>
+      <ul>
+        <li><a href="#句子的数学表达">句子的数学表达</a></li>
+        <li><a href="#seq2seq-的目标函数">Seq2Seq 的目标函数</a></li>
+        <li><a href="#seq2seq-的生成">Seq2Seq 的生成</a></li>
+        <li><a href="#seq2seq-的模型">Seq2Seq 的模型</a></li>
+      </ul>
+    </li>
+    <li><a href="#transformer">Transformer</a>
+      <ul>
+        <li><a href="#自注意力模型">自注意力模型</a></li>
+        <li><a href="#多头自注意力">多头自注意力</a></li>
+        <li><a href="#位置编码">位置编码</a></li>
+        <li><a href="#编码器-encoder">编码器 (Encoder)</a></li>
+        <li><a href="#解码器-decoder">解码器 (Decoder)</a></li>
+        <li><a href="#完整模型">完整模型</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
+    </div>
+    
+
+    
+    
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://sino-crdc.github.io/posts/AI/pytorch-3/">Tensorboardx 可视化</a>
+            <br />
+            
+            <a href="https://sino-crdc.github.io/posts/AI/pytorch-1/">模型载存、Datasets 和 数据预处理</a>
+            <br />
+            
+        </div>
+    </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy;2021 <a href="https://sino.github.io/">CRI@ÉCPKN</a> All rights reserved. | <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> |   Powered by <a href="https://gohugo.io" target="_blank" class="hover:text-eureka">Hugo</a> & <a href="https://github.com/wangchucheng/hugo-eureka" target="_blank" class="hover:text-eureka">Eureka</a>
+</p></div>
+</div>
+  </footer>
+</body>
+
+</html>

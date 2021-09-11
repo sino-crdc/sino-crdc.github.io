@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<script src="//cdn.jsdelivr.net/gh/zzzsyyy/zzzsyyy/CDN/instant.page@5.1.0.js" type="module"></script>
+<script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
+
+<title>微信小程序 ｜ 常见组件 | CRI@ÉCPKN</title>
+<link rel="stylesheet" href="https://sino-crdc.github.io/css/eureka.min.css">
+<script defer src="https://sino-crdc.github.io/js/eureka.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
+     media="print"
+    onload="this.media='all';this.onload=null" crossorigin>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"
+     crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+     integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+    });
+  });
+</script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://sino-crdc.github.io/images/icon_hu02c3d024ede12c2cfaabed7f8e0fb2e9_41387_32x32_fill_box_center_2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://sino-crdc.github.io/images/icon_hu02c3d024ede12c2cfaabed7f8e0fb2e9_41387_180x180_fill_box_center_2.png">
+
+<meta name="description"
+  content="微信小程序的语法基础">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Reserves",
+      "item":"https://sino-crdc.github.io/reserve/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"微信小程序 ｜ 常见组件",
+      "item":"https://sino-crdc.github.io/reserve/miniprogram/mnp-5/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://sino-crdc.github.io/reserve/miniprogram/mnp-5/"
+    },
+    "headline": "微信小程序 ｜ 常见组件 | CRI@ÉCPKN","datePublished": "2021-05-20T00:00:00+00:00",
+    "dateModified": "2021-05-23T00:00:00+00:00",
+    "wordCount":  1028 ,
+    "author": {
+        "@type": "Person",
+        "name": ["zhang"]
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "CRI",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://sino-crdc.github.io/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003e微信小程序的语法基础\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="微信小程序 ｜ 常见组件 | CRI@ÉCPKN" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://sino-crdc.github.io/images/icon.png">
+
+
+<meta property="og:url" content="https://sino-crdc.github.io/reserve/miniprogram/mnp-5/" />
+
+
+
+
+<meta property="og:description" content="微信小程序的语法基础" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="CRI@ÉCPKN" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2021-05-20T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2021-05-23T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="reserve" />
+
+
+<meta property="article:tag" content="微信小程序" />
+
+<meta property="article:tag" content="笔记" />
+
+
+
+
+
+
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/reserve/miniprogram/mnp-7/" />
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/posts/Miniprogram/mnp-2/" />
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/reserve/miniprogram/mnp-6/" />
+
+
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/reserve/miniprogram/mnp-4/" />
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/reserve/miniprogram/mnp-3/" />
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/reserve/miniprogram/mnp-2/" />
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/reserve/miniprogram/mnp-1/" />
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/posts/Miniprogram/mnp-1/" />
+
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">CRI@ÉCPKN</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">文章</a>
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于</a>
+            <a href="/projects/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">项目</a>
+            <a href="/others/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">其他</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka">Auto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            switchMode('Auto')
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script></div>        
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">微信小程序 ｜ 常见组件</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-05-20</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-book-open mr-1"></i>
+        <span>1028字</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>3分钟</span>
+    </div>
+
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="https://sino-crdc.github.io/series/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="hover:text-eureka">小程序</a>
+        
+    </div>
+    
+
+</div>
+        
+        
+        
+
+        <div class="content">
+            <p>微信小程序的语法基础</p>
+<h1 id="常见组件">常见组件</h1>
+<h2 id="view标签"><code>view</code>标签</h2>
+<p>代替原来的 <code>div</code> 标签</p>
+<h2 id="text标签"><code>text</code>标签</h2>
+<ul>
+<li>文本标签</li>
+<li>只能嵌套text</li>
+<li>可以实现文字复制（只有这个标签）</li>
+<li>可以对空格、回车进行编码</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>默认</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user-select</td>
+<td>false</td>
+<td>文字是否可选</td>
+</tr>
+<tr>
+<td>decode</td>
+<td>false</td>
+<td>是否解码</td>
+</tr>
+</tbody>
+</table>
+<h2 id="image标签"><code>image</code>标签</h2>
+<ul>
+<li>
+<p>image组件的默认宽度是320px、高度是240px</p>
+</li>
+<li>
+<p>支持lazy 加载：当图片出现在某个高度之内时，自动开始加载</p>
+</li>
+<li>
+<p>一些属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>指定图片加载路径</td>
+</tr>
+<tr>
+<td>lazy-load</td>
+<td>图片懒加载</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>指定图片裁剪、缩放的形式</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>常见mode的值</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scaleToFill</td>
+<td>缩放模式，不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素</td>
+</tr>
+<tr>
+<td>aspectFit</td>
+<td>缩放模式，保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。</td>
+</tr>
+<tr>
+<td>widthFix</td>
+<td>缩放模式，宽度不变，高度自动变化，保持原图宽高比不变</td>
+</tr>
+<tr>
+<td>heightFix</td>
+<td>缩放模式，高度不变，宽度自动变化，保持原图宽高比不变</td>
+</tr>
+<tr>
+<td>aspectFill</td>
+<td>缩放模式，保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>image组件中的二维码、小程序码不支持长按识别</p>
+</li>
+</ul>
+<h2 id="swiper-组件"><code>swiper</code> 组件</h2>
+<p>轮播图</p>
+<ul>
+<li>轮播图外层容器：<code>swiper</code></li>
+<li>每一个轮播项： <code>swiper-item</code></li>
+<li>默认样式
+<ul>
+<li>width 100%</li>
+<li>height 150px</li>
+<li>swiper 高度 无法由内容撑开</li>
+</ul>
+</li>
+<li>先找原图的宽高，等比例计算swiper的宽高
+<ul>
+<li>swiper 宽度 = 100vw × 原图高度 / 原图的宽度</li>
+</ul>
+</li>
+</ul>
+<p><code>.wxml</code></p>
+<pre><code class="language-html">&lt;swiper&gt;
+  &lt;swiper-item&gt; &lt;image mode=&quot;widthFix&quot; src=&quot;.....&quot; /&gt; &lt;/swiper-item&gt;
+  &lt;swiper-item&gt; &lt;image mode=&quot;widthFix&quot; src=&quot;.....&quot; /&gt; &lt;/swiper-item&gt;
+  &lt;swiper-item&gt; &lt;image mode=&quot;widthFix&quot; src=&quot;.....&quot; /&gt; &lt;/swiper-item&gt;
+&lt;/swiper&gt;
+</code></pre>
+<p><code>.wxss</code></p>
+<pre><code class="language-css">swiiper{
+    width: 100%;
+    height: calc(100vw * 352 / 1125);
+}
+image{
+    width: 100%;
+}
+</code></pre>
+<blockquote>
+<p>“视区”：浏览器内部可视区域的大小</p>
+<p>“vw”：1vw等于视图窗口宽度的1%</p>
+</blockquote>
+<h3 id="swiper常见属性">swiper常见属性</h3>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>indicator-dots</td>
+<td>Boolean</td>
+<td>false</td>
+<td>显示指示点</td>
+</tr>
+<tr>
+<td>indicator-color</td>
+<td>Color</td>
+<td>rgba(0,0,0,3)</td>
+<td>指示点颜色</td>
+</tr>
+<tr>
+<td>circular</td>
+<td>Boolean</td>
+<td>false</td>
+<td>循环轮播</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>Boolean</td>
+<td>false</td>
+<td>自动轮播</td>
+</tr>
+<tr>
+<td>interval</td>
+<td>Number</td>
+<td>5000</td>
+<td>修改轮播时间</td>
+</tr>
+<tr>
+<td>indicator-active-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td>选中指示点的颜色</td>
+</tr>
+</tbody>
+</table>
+<h2 id="navigator标签"><code>navigator</code>标签</h2>
+<p>导航组件</p>
+<pre><code class="language-html">&lt;!--
+  0 块级元素
+  1 url 要跳转的要页面路径
+  2 target 跳转的页面（self/miniProgram）：自己或其他小程序
+  3 open-type 
+--&gt;
+
+&lt;navigator url=&quot;/.../.../...&quot;&gt; 下个界面 &lt;/navigator&gt;
+</code></pre>
+<p>open-type的有效值</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>navigate</td>
+<td>保留当前页面，跳转到除了tabbar的应用内其他页面</td>
+</tr>
+<tr>
+<td>redirect</td>
+<td>关闭当前页面，跳转到除了tabbar的应用内其他页面</td>
+</tr>
+<tr>
+<td>switchTab</td>
+<td>跳转到tabbar页面，并关闭其他非tabbar页面</td>
+</tr>
+<tr>
+<td>reLaunch</td>
+<td>关闭所有界面，打开到应用内的某个界面</td>
+</tr>
+<tr>
+<td>navigateBack</td>
+<td>关闭当前页面，返回一级或多级页面</td>
+</tr>
+<tr>
+<td>exit</td>
+<td>退出小程序</td>
+</tr>
+</tbody>
+</table>
+<h2 id="rich-text标签"><code>rich-text</code>标签</h2>
+<p>
+<a href="https://developers.weixin.qq.com/miniprogram/dev/component/rich-text.html" target="_blank">开发者文档</a></p>
+<p>富文本标签：将字符串解析为</p>
+<pre><code class="language-html">&lt;!--
+  1 nodes属性来实现
+    1 接收标签字符串
+    2 接收对象数组
+--&gt;
+</code></pre>
+<p><code>.js</code></p>
+<pre><code class="language-js">Page({
+    data:{
+        //1 标签字符串
+        //html:'......'
+        //2对象数组
+        html:[
+            //1 div标签 name属性来指定
+            name:&quot;div&quot;,
+            //标签上有哪些属性
+            attrs:{
+              //标签上的属性 class style
+              class:&quot;my_div&quot;,
+              style:&quot;color:red;&quot;
+            },
+            //3 子节点 children 要接收的数据类型和nodes第二种渲染方式的类型一致
+            children:[
+                {
+                    type:&quot;text&quot;,
+                    text:&quot;hello&quot;
+                }
+            ]
+        ]
+    }
+})
+</code></pre>
+<h2 id="button-标签"><code>button</code> 标签</h2>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://sino-crdc.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#微信小程序</a>
+    
+    <a href="https://sino-crdc.github.io/tags/%E7%AC%94%E8%AE%B0/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#笔记</a>
+    
+</div>
+        
+        
+        
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://sino-crdc.github.io/authors/zhang/" class="w-24 h-24 md:mr-4">
+            
+            
+            <i class="fas fa-user-circle fa-6x"></i>
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://sino-crdc.github.io/authors/zhang/" class="block font-bold text-lg pb-1 mb-2 border-b">zhang</a>
+            <span class="block pb-2"></span>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://sino-crdc.github.io/reserve/JavaScript/json/" class="block">json格式详解</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-4/" class="block">微信小程序 | 样式</a>
+        
+    </div>
+</div>
+
+        
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+<div class="bg-secondary-bg rounded p-6">
+    <h3 class="text-lg font-semibold mb-4">系列文章</h3>
+    <div class="content">
+        
+        
+        <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-7/">微信小程序 | 实践项目笔记（1）-- css部分</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/posts/Miniprogram/mnp-2/">微信小程序｜实践项目笔记——css部分</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-6/">微信小程序 ｜ 自定义组件</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-5/">微信小程序 ｜ 常见组件</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-4/">微信小程序 | 样式</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-3/">微信小程序 | block标签、条件渲染和事件绑定</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-2/">微信小程序 | 数据绑定、运算和循环</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-1/">微信小程序 | 配置文件</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/posts/Miniprogram/mnp-1/">微信小程序｜基础</a>
+        <br />
+        
+        
+    </div>
+</div>
+        
+        
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#view标签"><code>view</code>标签</a></li>
+    <li><a href="#text标签"><code>text</code>标签</a></li>
+    <li><a href="#image标签"><code>image</code>标签</a></li>
+    <li><a href="#swiper-组件"><code>swiper</code> 组件</a>
+      <ul>
+        <li><a href="#swiper常见属性">swiper常见属性</a></li>
+      </ul>
+    </li>
+    <li><a href="#navigator标签"><code>navigator</code>标签</a></li>
+    <li><a href="#rich-text标签"><code>rich-text</code>标签</a></li>
+    <li><a href="#button-标签"><code>button</code> 标签</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
+    </div>
+    
+
+    
+    
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-4/">微信小程序 | 样式</a>
+            <br />
+            
+            <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-3/">微信小程序 | block标签、条件渲染和事件绑定</a>
+            <br />
+            
+            <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-2/">微信小程序 | 数据绑定、运算和循环</a>
+            <br />
+            
+            <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-1/">微信小程序 | 配置文件</a>
+            <br />
+            
+            <a href="https://sino-crdc.github.io/reserve/JavaScript/json/">json格式详解</a>
+            <br />
+            
+            <a href="https://sino-crdc.github.io/reserve/htmlcss/ht-4/">HTML笔记-4：HTML链接、头部、CSS</a>
+            <br />
+            
+        </div>
+    </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy;2021 <a href="https://sino.github.io/">CRI@ÉCPKN</a> All rights reserved. | <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> |   Powered by <a href="https://gohugo.io" target="_blank" class="hover:text-eureka">Hugo</a> & <a href="https://github.com/wangchucheng/hugo-eureka" target="_blank" class="hover:text-eureka">Eureka</a>
+</p></div>
+</div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C on CRI@ÉCPKN</title>
+    <link>https://sino-crdc.github.io/tags/C/</link>
+    <description>Recent content in C on CRI@ÉCPKN</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy;2021 &lt;a href=&#34;https://sino.github.io/&#34;&gt;CRI@ÉCPKN&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC 4.0&lt;/a&gt; | </copyright>
+    <lastBuildDate>Thu, 25 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sino-crdc.github.io/tags/C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C语言笔记-7：一些习题</title>
+      <link>https://sino-crdc.github.io/reserve/C/C-7/</link>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/reserve/C/C-7/</guid>
+      <description>&lt;p&gt;C语言笔记-7：一些习题&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C语言笔记-6：初识指针</title>
+      <link>https://sino-crdc.github.io/reserve/C/C-6/</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/reserve/C/C-6/</guid>
+      <description>&lt;p&gt;C语言笔记-6：初始指针&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C语言笔记-5：操作符详解</title>
+      <link>https://sino-crdc.github.io/reserve/C/C-5/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/reserve/C/C-5/</guid>
+      <description>&lt;p&gt;C语言笔记-5：操作符详解&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C语言笔记-4：数组</title>
+      <link>https://sino-crdc.github.io/reserve/C/C-4/</link>
+      <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/reserve/C/C-4/</guid>
+      <description>&lt;p&gt;C语言笔记-4：数组&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C语言笔记-3：函数与递归</title>
+      <link>https://sino-crdc.github.io/reserve/C/C-3/</link>
+      <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/reserve/C/C-3/</guid>
+      <description>&lt;p&gt;C语言笔记-3：函数与递归&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C语言笔记-2：循环和分支语句</title>
+      <link>https://sino-crdc.github.io/reserve/C/C-2/</link>
+      <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/reserve/C/C-2/</guid>
+      <description>&lt;p&gt;C语言笔记-2：循环和分支语句&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C语言笔记-1：初识C语言</title>
+      <link>https://sino-crdc.github.io/reserve/C/C-1/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/reserve/C/C-1/</guid>
+      <description>&lt;p&gt;C语言笔记-1：初识C语言&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

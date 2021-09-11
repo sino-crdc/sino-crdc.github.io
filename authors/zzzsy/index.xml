@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zhang.Mathias on CRI@ÉCPKN</title>
+    <link>https://sino-crdc.github.io/authors/zzzsy/</link>
+    <description>Recent content in Zhang.Mathias on CRI@ÉCPKN</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy;2021 &lt;a href=&#34;https://sino.github.io/&#34;&gt;CRI@ÉCPKN&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC 4.0&lt;/a&gt; | </copyright>
+    <lastBuildDate>Fri, 20 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sino-crdc.github.io/authors/zzzsy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>微信小程序｜实践项目笔记——css部分</title>
+      <link>https://sino-crdc.github.io/posts/Miniprogram/mnp-2/</link>
+      <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/posts/Miniprogram/mnp-2/</guid>
+      <description>&lt;p&gt;微信小程序项目实践中关于wxss的一些笔记&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>微信小程序｜基础</title>
+      <link>https://sino-crdc.github.io/posts/Miniprogram/mnp-1/</link>
+      <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/posts/Miniprogram/mnp-1/</guid>
+      <description>&lt;p&gt;微信小程序的基础&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

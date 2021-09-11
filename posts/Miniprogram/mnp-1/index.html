@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang='zh' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<script src="//cdn.jsdelivr.net/gh/zzzsyyy/zzzsyyy/CDN/instant.page@5.1.0.js" type="module"></script>
+<script src="//cdn.jsdelivr.net/npm/@waline/client"></script>
+
+<title>微信小程序｜基础 | CRI@ÉCPKN</title>
+<link rel="stylesheet" href="https://sino-crdc.github.io/css/eureka.min.css">
+<script defer src="https://sino-crdc.github.io/js/eureka.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/styles/solarized-light.min.css"
+     media="print"
+    onload="this.media='all';this.onload=null" crossorigin>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.5.0/build/highlight.min.js"
+     crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+     integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+      ],
+    });
+  });
+</script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="https://sino-crdc.github.io/images/icon_hu02c3d024ede12c2cfaabed7f8e0fb2e9_41387_32x32_fill_box_center_2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://sino-crdc.github.io/images/icon_hu02c3d024ede12c2cfaabed7f8e0fb2e9_41387_180x180_fill_box_center_2.png">
+
+<meta name="description"
+  content="微信小程序的基础">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"笔记",
+      "item":"https://sino-crdc.github.io/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"微信小程序｜基础",
+      "item":"https://sino-crdc.github.io/posts/Miniprogram/mnp-1/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://sino-crdc.github.io/posts/Miniprogram/mnp-1/"
+    },
+    "headline": "微信小程序｜基础 | CRI@ÉCPKN","datePublished": "2021-05-02T00:00:00+00:00",
+    "dateModified": "2021-06-13T00:00:00+00:00",
+    "wordCount":  3056 ,
+    "author": {
+        "@type": "Person",
+        "name": ["zzzsy"]
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "CRI",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://sino-crdc.github.io/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003e微信小程序的基础\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="微信小程序｜基础 | CRI@ÉCPKN" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="https://sino-crdc.github.io/images/icon.png">
+
+
+<meta property="og:url" content="https://sino-crdc.github.io/posts/Miniprogram/mnp-1/" />
+
+
+
+
+<meta property="og:description" content="微信小程序的基础" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="CRI@ÉCPKN" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2021-05-02T00:00:00&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2021-06-13T00:00:00&#43;00:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="微信小程序" />
+
+
+
+
+
+
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/reserve/miniprogram/mnp-7/" />
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/posts/Miniprogram/mnp-2/" />
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/reserve/miniprogram/mnp-6/" />
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/reserve/miniprogram/mnp-5/" />
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/reserve/miniprogram/mnp-4/" />
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/reserve/miniprogram/mnp-3/" />
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/reserve/miniprogram/mnp-2/" />
+
+
+
+<meta property="og:see_also" content="https://sino-crdc.github.io/reserve/miniprogram/mnp-1/" />
+
+
+
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">CRI@ÉCPKN</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">文章</a>
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">关于</a>
+            <a href="/projects/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">项目</a>
+            <a href="/others/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">其他</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka">Auto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            switchMode('Auto')
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script></div>        
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
+
+
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">微信小程序｜基础</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-05-02</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-book-open mr-1"></i>
+        <span>3056字</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>7分钟</span>
+    </div>
+
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="https://sino-crdc.github.io/series/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="hover:text-eureka">小程序</a>
+        
+    </div>
+    
+
+</div>
+        
+        
+        
+
+        <div class="content">
+            <p>微信小程序的基础</p>
+<h2 id="配置文件">配置文件</h2>
+<h3 id="全局配置文件appjson">全局配置文件——app.json</h3>
+<p>
+<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html" target="_blank">开发者文档</a></p>
+<h4 id="pages字段">pages字段</h4>
+<p>描述所有的页面路径，对应小程序的页面<code>pages</code></p>
+<p>对应的value是<code>pages/index/index</code>，<strong>无后缀名</strong></p>
+<ul>
+<li>
+<p>在开发者工具中直接添加语句就可以创建文件</p>
+</li>
+<li>
+<p><code>pages</code>中的一个语句对应打开的默认界面（否则可以使用<code>entryPagePath</code>属性）</p>
+</li>
+</ul>
+<h4 id="windows字段">windows字段</h4>
+<p>定义小程序所有页面的状态栏、导航条、标题、窗口背景色等</p>
+<p>常见属性</p>
+<ul>
+<li><code>navigationBarBackgroundColor</code> 导航栏文字内容</li>
+<li><code>navigationBarTitleText</code> 导航栏文字内容</li>
+<li><code>navigationBarTextStyle</code> 导航栏标题颜色（black/white）</li>
+<li><code>enablePullDownRefresh</code> 是否开启全局的下拉刷新</li>
+<li><code>backgroundTextStyle</code> 下拉 loading 的样式，仅支持 <code>dark</code> / <code>light</code></li>
+<li><code>backgroundColor</code> 窗口的背景颜色（下拉后三个小圆点的背景）</li>
+</ul>
+<h4 id="tabbar字段">tabBar字段</h4>
+<p>定义多tab应用的表现</p>
+<ul>
+<li><code>color</code> tab上的文字颜色</li>
+<li><code>selectedColor</code> tab上的文字选中时的颜色</li>
+<li><code>backgroundColor</code> tab背景色</li>
+<li><code>list</code> tab的列表，最少两个，最多五个
+<ul>
+<li><code>pagePath</code> 已经在pages中定义的页面路径</li>
+<li><code>text</code> tab上的按钮文字</li>
+<li><code>iconPath</code> 图片路径</li>
+<li><code>selectedIconPath</code> 选中时的图片路径</li>
+</ul>
+</li>
+</ul>
+<h3 id="页面配置文件pagejson">页面配置文件——page.json</h3>
+<p>
+<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/page.html" target="_blank">开发者文档</a></p>
+<p>单独配置页面的属性</p>
+<p>只能配置<code>app.json</code>中的<code>windows</code>部分，会覆盖<code>app.json</code>中的配置</p>
+<h3 id="sitemap配置sitemapjson">sitemap配置——sitemap.json</h3>
+<p>
+<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/sitemap.html" target="_blank">开发者文档</a></p>
+<p>配置小程序及其页面是否允许被微信索引</p>
+<h2 id="模版语法">模版语法</h2>
+<h3 id="数据绑定">数据绑定</h3>
+<h4 id="普通写法">普通写法</h4>
+<p><code>text</code>标签相当于<code>span</code>标签：行内元素</p>
+<p><code>view</code>标签相当于<code>div</code>标签：块级元素</p>
+<h4 id="数据绑定-1">数据绑定</h4>
+<p><code>.js</code>文件</p>
+<pre><code class="language-javascript">Page({
+    data: {
+        msg: &quot;hello&quot;,
+        num: 10000,
+        person:{
+            age:74,
+            height:176,
+            name:&quot;Paul&quot;
+        },
+        isChecked:false
+    }
+})
+</code></pre>
+<p><code>.wxml</code>文件</p>
+<pre><code class="language-html">&lt;view&gt; {{msg}} &lt;/view&gt;
+&lt;view&gt; {{person.age}} &lt;/view&gt;
+&lt;view data-num=&quot;{{num}}&quot; &gt; 自定义属性 &lt;/view&gt;
+&lt;view&gt;
+    &lt;checkbox checked=&quot;{{isChecked}}&quot; &gt;  &lt;/checkbox&gt;
+    &lt;!--引号与括号间不能有空格--&gt;
+&lt;/view&gt;
+</code></pre>
+<h2 id="运算">运算</h2>
+<blockquote>
+<p>可已在花括号中加入一些表达式</p>
+</blockquote>
+<pre><code class="language-html">&lt;!--数字运算--&gt;
+&lt;view&gt; {{1+1}} &lt;/view&gt;
+&lt;!--字符串拼接--&gt;
+&lt;view&gt; {{'1'+'1'}} &lt;/view&gt;
+&lt;!--三目表达式--&gt;
+&lt;view&gt; {{ 10%2===0 ? '偶数' : '奇数'}} &lt;/view&gt;
+&lt;!--三个’=’是严格等于，即值相等，数据类型也相等--&gt;
+</code></pre>
+<h2 id="列表渲染">列表渲染</h2>
+<ul>
+<li><code>wx:for</code></li>
+</ul>
+<p>项的变量名默认为<code>item</code> <code>wx:for-item</code>可移指定当前元素的变量名</p>
+<p>下标变量名默认为<code>index</code> <code>wx:for-index</code>可以指定当前下标的变量名</p>
+<p><code>.js</code></p>
+<pre><code class="language-javascript">list:[
+    {
+        id:0,
+        name:&quot;A&quot;
+    },
+    {
+        id:1,
+        name:&quot;B&quot;
+    },
+    {
+        id:2,
+        name:&quot;C&quot;
+    }
+]
+person:{
+    age:74,
+    height:176,
+    name:&quot;Paul&quot;,
+    id=1234
+}
+</code></pre>
+<p><code>.wxml</code></p>
+<pre><code class="language-html">&lt;!--
+  列表循环
+    1 wx:for=&quot;{{数组或对象}}&quot; 
+      wx:for-item=&quot;循环项的名称&quot; 
+      wx:for-index=&quot;索引项的索引&quot;
+    2 wx:key=&quot;唯一的值&quot; 提高渲染性能
+      使用主键或 *this
+    3 循环嵌套时，名称不要重复（index，item）
+    4 wx:for-item=&quot;item&quot; wx:for-index=&quot;index&quot;是默认值，可以不写（无嵌套时）
+--&gt;
+&lt;view&gt; 
+    &lt;view wx:for=&quot;{{list}}&quot; wx:for-item=&quot;item&quot; wx:for-index=&quot;index&quot;&gt; 
+        索引：{{index}}
+        --
+        值：{{item.name}}
+    &lt;/view&gt;
+&lt;/view&gt;
+</code></pre>
+<ul>
+<li>对象循环</li>
+</ul>
+<pre><code class="language-html">&lt;!--wx:for-item=&quot;value&quot; wx:for-index=&quot;key&quot;
+为了便于识别对象--&gt;
+&lt;view&gt; 
+    &lt;view&gt; 对象循环 &lt;/view&gt;
+    &lt;view
+        wx:for=&quot;{{person}}&quot;
+        wx:for-item=&quot;value&quot; 
+        wx:for-index=&quot;key&quot;
+        wx:key=&quot;id&quot;&gt;
+        属性:{{value}}
+        --
+        值:{{key}}
+    &lt;/view&gt;
+&lt;/view&gt;
+</code></pre>
+<h2 id="条件渲染">条件渲染</h2>
+<h3 id="wxif"><code>wx:if</code></h3>
+<p>使用<code>wx:if=&quot;{{condition}}&quot;</code>来</p>
+<pre><code class="language-html">&lt;view&gt; 
+    &lt;view&gt; 条件渲染 &lt;/view&gt;
+    &lt;view wx:if=&quot;{{true}}&quot;&gt; 显示 &lt;/view&gt;
+    &lt;view wx:if=&quot;{{false}}&quot;&gt; 隐藏 &lt;/view&gt;
+&lt;/view&gt;
+</code></pre>
+<p><code>if</code>  <code>else</code>语法——<code>wx:if</code> <code>wx:elif</code> <code>wx:else</code></p>
+<h3 id="hidden属性"><code>hidden</code>属性</h3>
+<pre><code class="language-html">&lt;view hidden&gt; 隐藏 &lt;/view&gt;
+&lt;view hidden=&quot;{{true}}&quot;&gt; 隐藏 &lt;/view&gt;
+&lt;view hidden=&quot;{{false}}&quot;&gt; 显示 &lt;/view&gt;
+</code></pre>
+<blockquote>
+<p>当标签不是频繁地切换显示时 优先使用 <code>wx:if</code> （直接移除代码）</p>
+<p>当标签需要频繁地切换显示时 优先使用 <code>hidden</code> （添加隐藏样式）</p>
+</blockquote>
+<blockquote>
+<p><code>hidden</code>属性不要和<code>diplay</code>样式一起使用</p>
+</blockquote>
+<h2 id="事件绑定">事件绑定</h2>
+<h4 id="双向绑定">双向绑定</h4>
+<p><code>.js</code></p>
+<pre><code class="language-js">Page({
+    data:{
+        num: 0
+    },
+    //input事件的执行
+    handleInput(e){
+        //console.log(e);
+        this.setData({
+        num: e.detail.value
+    })
+    }
+})
+</code></pre>
+<p><code>.html</code></p>
+<pre><code class="language-html">&lt;!--
+  1 需要给input标签绑定一个input事件
+    绑定关键字 bindinput
+  2 获取输入框的值
+    e.detail.value
+  3 把输入框的值 赋到data
+    this.setData({
+        num:e.detail.value
+    })
+--&gt;
+&lt;input type=&quot;text&quot; bindinput=&quot;handleInput&quot; /&gt;
+&lt;view&gt;  
+  {{num}}
+&lt;/view&gt;
+</code></pre>
+<h4 id="绑定一个按钮">绑定一个按钮</h4>
+<pre><code class="language-js">Page({
+    //
+    handletap(e){
+        //console.log(e);
+        const operation=e.currentTarget.dataset.operation;
+        this.setData({
+            num: this.data.num + operation
+        })
+    }
+})
+</code></pre>
+<pre><code class="language-html">&lt;!--
+  1 需要加入一个点击事件
+    1 bindtap
+    2 无法在小程序的事件中直接传参
+    3 在属性中自定义 来传参
+    4 事件源中获取参数
+--&gt;
+&lt;input type=&quot;text&quot; bindinput=&quot;handleInput&quot; /&gt;
+&lt;button bindtap=&quot;handletap data-operation=&quot;{{1}}&gt;+&lt;/button&gt;
+&lt;button bindtap=&quot;handletap data-operation=&quot;{{-1}}&gt;-&lt;/button&gt;
+&lt;view&gt;  
+  {{num}}
+&lt;/view&gt;
+</code></pre>
+<h3 id="block"><code>block</code></h3>
+<p>占位符一样的标签</p>
+<p>写代码时，可以看到标签</p>
+<p>页面渲染时，会被移除（使用<code>for</code>循环时）</p>
+<h1 id="样式wxss">样式WXSS</h1>
+<h2 id="尺寸单位">尺寸单位</h2>
+<p><code>rpx</code>：可以根据屏幕宽度进行自适应。规定宽度为<code>750rpx</code> 。<code>1rpx = 0.5px = 1物理像素</code></p>
+<p><code>.wxss</code></p>
+<pre><code class="language-css">/*
+  1 小程序中，不需要主动引入样式文件
+  2 rpx可以自适应
+  3 计算时，利用属性 calc
+    1 可以使用百分比、px、em、rem等单位
+    2 可以混合使用各种单位进行计算
+    3 表达式中用`+`和`-`时，其前后必须油空格
+    4 表达式中有`*`和`/`时，其前后可以没有空格，但建议保留
+*/
+view{
+    width: calc(750rpx * 100 / 375);
+    height: 200rpx;
+    font-size: 40rpx;
+    background-color: aqua;
+}
+</code></pre>
+<p><code>.wxml</code></p>
+<pre><code class="language-html">&lt;view&gt; 
+  rpx
+&lt;/view&gt;
+</code></pre>
+<p>设计稿 <code>page px</code> ， 存在一个元素<code>100 px</code></p>
+<p>适配不同界面时</p>
+<p><code>100 px = 750 rpx * 100 / page</code></p>
+<h2 id="样式导入">样式导入</h2>
+<p>使用<code>@import</code>导入，只支持<strong>相对路径</strong></p>
+<p>例如：</p>
+<pre><code class="language-css">@import &quot;../../styles/common.wxss&quot;;
+</code></pre>
+<h2 id="选择器">选择器</h2>
+<p>小程序不支持通配符<code>*</code> ！</p>
+<p>支持的选择器有</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>样例</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.class</td>
+<td><code>.intro</code></td>
+<td>选择所有拥有 class=“intro”的组件</td>
+</tr>
+<tr>
+<td>#id</td>
+<td><code>#firstname</code></td>
+<td>选择拥有 id=“firstname”的组件</td>
+</tr>
+<tr>
+<td>element</td>
+<td><code>view</code></td>
+<td>选择所有view组件</td>
+</tr>
+<tr>
+<td>element, element</td>
+<td><code>view, checkbox</code></td>
+<td>选择所有view和checkbox组件</td>
+</tr>
+<tr>
+<td>nth-child(n)</td>
+<td>view:nth-child(n)</td>
+<td>选择某个索引的标签</td>
+</tr>
+<tr>
+<td>::after</td>
+<td><code>view::after</code></td>
+<td>在view组件后插入内容</td>
+</tr>
+<tr>
+<td>::before</td>
+<td><code>view::before</code></td>
+<td>在view组件前插入内容</td>
+</tr>
+</tbody>
+</table>
+<h2 id="使用less">使用less</h2>
+<p><code>vscode</code> 使用 <code>easy less</code> 插件</p>
+<p>配置文件中写</p>
+<pre><code class="language-json">&quot;less.compile&quot;:{
+    &quot;outExt&quot;: &quot;.wxss&quot;
+}
+</code></pre>
+<h1 id="常见组件">常见组件</h1>
+<h2 id="view标签"><code>view</code>标签</h2>
+<p>代替原来的 <code>div</code> 标签</p>
+<h2 id="text标签"><code>text</code>标签</h2>
+<ul>
+<li>文本标签</li>
+<li>只能嵌套text</li>
+<li>可以实现文字复制（只有这个标签）</li>
+<li>可以对空格、回车进行编码</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>默认</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user-select</td>
+<td>false</td>
+<td>文字是否可选</td>
+</tr>
+<tr>
+<td>decode</td>
+<td>false</td>
+<td>是否解码</td>
+</tr>
+</tbody>
+</table>
+<h2 id="image标签"><code>image</code>标签</h2>
+<ul>
+<li>
+<p>image组件的默认宽度是320px、高度是240px</p>
+</li>
+<li>
+<p>支持lazy 加载：当图片出现在某个高度之内时，自动开始加载</p>
+</li>
+<li>
+<p>一些属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>指定图片加载路径</td>
+</tr>
+<tr>
+<td>lazy-load</td>
+<td>图片懒加载</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>指定图片裁剪、缩放的形式</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>常见mode的值</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scaleToFill</td>
+<td>缩放模式，不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素</td>
+</tr>
+<tr>
+<td>aspectFit</td>
+<td>缩放模式，保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。</td>
+</tr>
+<tr>
+<td>widthFix</td>
+<td>缩放模式，宽度不变，高度自动变化，保持原图宽高比不变</td>
+</tr>
+<tr>
+<td>heightFix</td>
+<td>缩放模式，高度不变，宽度自动变化，保持原图宽高比不变</td>
+</tr>
+<tr>
+<td>aspectFill</td>
+<td>缩放模式，保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>image组件中的二维码、小程序码不支持长按识别</p>
+</li>
+</ul>
+<h2 id="swiper-组件"><code>swiper</code> 组件</h2>
+<p>轮播图</p>
+<ul>
+<li>轮播图外层容器：<code>swiper</code></li>
+<li>每一个轮播项： <code>swiper-item</code></li>
+<li>默认样式
+<ul>
+<li>width 100%</li>
+<li>height 150px</li>
+<li>swiper 高度 无法由内容撑开</li>
+</ul>
+</li>
+<li>先找原图的宽高，等比例计算swiper的宽高
+<ul>
+<li>swiper 宽度 = 100vw × 原图高度 / 原图的宽度</li>
+</ul>
+</li>
+</ul>
+<p><code>.wxml</code></p>
+<pre><code class="language-html">&lt;swiper&gt;
+  &lt;swiper-item&gt; &lt;image mode=&quot;widthFix&quot; src=&quot;.....&quot; /&gt; &lt;/swiper-item&gt;
+  &lt;swiper-item&gt; &lt;image mode=&quot;widthFix&quot; src=&quot;.....&quot; /&gt; &lt;/swiper-item&gt;
+  &lt;swiper-item&gt; &lt;image mode=&quot;widthFix&quot; src=&quot;.....&quot; /&gt; &lt;/swiper-item&gt;
+&lt;/swiper&gt;
+</code></pre>
+<p><code>.wxss</code></p>
+<pre><code class="language-css">swiiper{
+    width: 100%;
+    height: calc(100vw * 352 / 1125);
+}
+image{
+    width: 100%;
+}
+</code></pre>
+<blockquote>
+<p>“视区”：浏览器内部可视区域的大小</p>
+<p>“vw”：1vw等于视图窗口宽度的1%</p>
+</blockquote>
+<h3 id="swiper常见属性">swiper常见属性</h3>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>indicator-dots</td>
+<td>Boolean</td>
+<td>false</td>
+<td>显示指示点</td>
+</tr>
+<tr>
+<td>indicator-color</td>
+<td>Color</td>
+<td>rgba(0,0,0,3)</td>
+<td>指示点颜色</td>
+</tr>
+<tr>
+<td>circular</td>
+<td>Boolean</td>
+<td>false</td>
+<td>循环轮播</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>Boolean</td>
+<td>false</td>
+<td>自动轮播</td>
+</tr>
+<tr>
+<td>interval</td>
+<td>Number</td>
+<td>5000</td>
+<td>修改轮播时间</td>
+</tr>
+<tr>
+<td>indicator-active-color</td>
+<td>Color</td>
+<td>#000000</td>
+<td>选中指示点的颜色</td>
+</tr>
+</tbody>
+</table>
+<h2 id="navigator标签"><code>navigator</code>标签</h2>
+<p>导航组件</p>
+<pre><code class="language-html">&lt;!--
+  0 块级元素
+  1 url 要跳转的要页面路径
+  2 target 跳转的页面（self/miniProgram）：自己或其他小程序
+  3 open-type 
+--&gt;
+
+&lt;navigator url=&quot;/.../.../...&quot;&gt; 下个界面 &lt;/navigator&gt;
+</code></pre>
+<p>open-type的有效值</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>navigate</td>
+<td>保留当前页面，跳转到除了tabbar的应用内其他页面</td>
+</tr>
+<tr>
+<td>redirect</td>
+<td>关闭当前页面，跳转到除了tabbar的应用内其他页面</td>
+</tr>
+<tr>
+<td>switchTab</td>
+<td>跳转到tabbar页面，并关闭其他非tabbar页面</td>
+</tr>
+<tr>
+<td>reLaunch</td>
+<td>关闭所有界面，打开到应用内的某个界面</td>
+</tr>
+<tr>
+<td>navigateBack</td>
+<td>关闭当前页面，返回一级或多级页面</td>
+</tr>
+<tr>
+<td>exit</td>
+<td>退出小程序</td>
+</tr>
+</tbody>
+</table>
+<h2 id="rich-text标签"><code>rich-text</code>标签</h2>
+<p>
+<a href="https://developers.weixin.qq.com/miniprogram/dev/component/rich-text.html" target="_blank">开发者文档</a></p>
+<p>富文本标签：将字符串解析为</p>
+<pre><code class="language-html">&lt;!--
+  1 nodes属性来实现
+    1 接收标签字符串
+    2 接收对象数组
+--&gt;
+</code></pre>
+<p><code>.js</code></p>
+<pre><code class="language-js">Page({
+    data:{
+        //1 标签字符串
+        //html:'......'
+        //2对象数组
+        html:[
+            //1 div标签 name属性来指定
+            name:&quot;div&quot;,
+            //标签上有哪些属性
+            attrs:{
+              //标签上的属性 class style
+              class:&quot;my_div&quot;,
+              style:&quot;color:red;&quot;
+            },
+            //3 子节点 children 要接收的数据类型和nodes第二种渲染方式的类型一致
+            children:[
+                {
+                    type:&quot;text&quot;,
+                    text:&quot;hello&quot;
+                }
+            ]
+        ]
+    }
+})
+</code></pre>
+<h2 id="button-标签"><code>button</code> 标签</h2>
+<h1 id="自定义组件">自定义组件</h1>
+<blockquote>
+<p>增加代码复用性</p>
+</blockquote>
+<h2 id="创建自定义组件">创建自定义组件</h2>
+<ul>
+<li>结构</li>
+</ul>
+<pre><code class="language-text">component
+    ｜
+   xxx -
+       ｜
+       ｜ - xxx.wxml
+       ｜ - xxx.js
+       ｜ - xxx.wxss
+       ｜ - xxx.json
+</code></pre>
+<ul>
+<li>
+<p>使用</p>
+<blockquote>
+<p>在使用组件的页面json文件中引用组件</p>
+</blockquote>
+<pre><code class="language-json">{
+    &quot;usingComponents&quot;:{
+        &quot;xxx&quot;:&quot;../../component/xxx/xxx&quot;
+    }
+}
+</code></pre>
+</li>
+</ul>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="https://sino-crdc.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#微信小程序</a>
+    
+</div>
+        
+        
+        
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="https://sino-crdc.github.io/authors/zzzsy/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="https://sino-crdc.github.io/avatar/zzzsy.png" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="https://sino-crdc.github.io/authors/zzzsy/" class="block font-bold text-lg pb-1 mb-2 border-b">Zhang.Mathias</a>
+            <span class="block pb-2">巧者劳而智者忧，无能者无所求，饱食而遨游，泛若不系之舟</span>
+            
+            
+            
+            
+            
+            <a href="mailto:zsy3141592@163.com" class="mr-1">
+                <i class="fas fa-envelope"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://twitter.com/zzzsyyy/" class="mr-1">
+                <i class="fab fa-twitter"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://github.com/zzzsyyy" class="mr-1">
+                <i class="fab fa-github"></i>
+            </a>
+            
+            
+            
+            
+            
+            <a href="https://pan.zzzsy.top" class="mr-1">
+                <i class="fab fa-google-drive"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+        <span class="block font-bold">上一页</span>
+        <a href="https://sino-crdc.github.io/posts/Miniprogram/mnp-2/" class="block">微信小程序｜实践项目笔记——css部分</a>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">下一页</span>
+        <a href="https://sino-crdc.github.io/posts/AI/pytorch-2/" class="block">NLP 基础补充</a>
+        
+    </div>
+</div>
+
+        
+    </div>
+    
+    <div class="col-span-2">
+        
+        
+<div class="bg-secondary-bg rounded p-6">
+    <h3 class="text-lg font-semibold mb-4">系列文章</h3>
+    <div class="content">
+        
+        
+        <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-7/">微信小程序 | 实践项目笔记（1）-- css部分</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/posts/Miniprogram/mnp-2/">微信小程序｜实践项目笔记——css部分</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-6/">微信小程序 ｜ 自定义组件</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-5/">微信小程序 ｜ 常见组件</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-4/">微信小程序 | 样式</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-3/">微信小程序 | block标签、条件渲染和事件绑定</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-2/">微信小程序 | 数据绑定、运算和循环</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-1/">微信小程序 | 配置文件</a>
+        <br />
+        
+        <a href="https://sino-crdc.github.io/posts/Miniprogram/mnp-1/">微信小程序｜基础</a>
+        <br />
+        
+        
+    </div>
+</div>
+        
+        
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">本页内容</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#配置文件">配置文件</a>
+      <ul>
+        <li><a href="#全局配置文件appjson">全局配置文件——app.json</a>
+          <ul>
+            <li><a href="#pages字段">pages字段</a></li>
+            <li><a href="#windows字段">windows字段</a></li>
+            <li><a href="#tabbar字段">tabBar字段</a></li>
+          </ul>
+        </li>
+        <li><a href="#页面配置文件pagejson">页面配置文件——page.json</a></li>
+        <li><a href="#sitemap配置sitemapjson">sitemap配置——sitemap.json</a></li>
+      </ul>
+    </li>
+    <li><a href="#模版语法">模版语法</a>
+      <ul>
+        <li><a href="#数据绑定">数据绑定</a>
+          <ul>
+            <li><a href="#普通写法">普通写法</a></li>
+            <li><a href="#数据绑定-1">数据绑定</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#运算">运算</a></li>
+    <li><a href="#列表渲染">列表渲染</a></li>
+    <li><a href="#条件渲染">条件渲染</a>
+      <ul>
+        <li><a href="#wxif"><code>wx:if</code></a></li>
+        <li><a href="#hidden属性"><code>hidden</code>属性</a></li>
+      </ul>
+    </li>
+    <li><a href="#事件绑定">事件绑定</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#双向绑定">双向绑定</a></li>
+            <li><a href="#绑定一个按钮">绑定一个按钮</a></li>
+          </ul>
+        </li>
+        <li><a href="#block"><code>block</code></a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#尺寸单位">尺寸单位</a></li>
+    <li><a href="#样式导入">样式导入</a></li>
+    <li><a href="#选择器">选择器</a></li>
+    <li><a href="#使用less">使用less</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#view标签"><code>view</code>标签</a></li>
+    <li><a href="#text标签"><code>text</code>标签</a></li>
+    <li><a href="#image标签"><code>image</code>标签</a></li>
+    <li><a href="#swiper-组件"><code>swiper</code> 组件</a>
+      <ul>
+        <li><a href="#swiper常见属性">swiper常见属性</a></li>
+      </ul>
+    </li>
+    <li><a href="#navigator标签"><code>navigator</code>标签</a></li>
+    <li><a href="#rich-text标签"><code>rich-text</code>标签</a></li>
+    <li><a href="#button-标签"><code>button</code> 标签</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#创建自定义组件">创建自定义组件</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
+    </div>
+    
+
+    
+    
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">相关</h2>
+        <div class="content">
+            
+            <a href="https://sino-crdc.github.io/reserve/miniprogram/mnp-1/">微信小程序 | 配置文件</a>
+            <br />
+            
+        </div>
+    </div>
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
+
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy;2021 <a href="https://sino.github.io/">CRI@ÉCPKN</a> All rights reserved. | <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a> |   Powered by <a href="https://gohugo.io" target="_blank" class="hover:text-eureka">Hugo</a> & <a href="https://github.com/wangchucheng/hugo-eureka" target="_blank" class="hover:text-eureka">Eureka</a>
+</p></div>
+</div>
+  </footer>
+</body>
+
+</html>

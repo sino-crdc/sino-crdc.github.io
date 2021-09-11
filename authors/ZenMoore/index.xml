@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ZenMoore on CRI@ÉCPKN</title>
+    <link>https://sino-crdc.github.io/authors/ZenMoore/</link>
+    <description>Recent content in ZenMoore on CRI@ÉCPKN</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy;2021 &lt;a href=&#34;https://sino.github.io/&#34;&gt;CRI@ÉCPKN&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC 4.0&lt;/a&gt; | </copyright>
+    <lastBuildDate>Fri, 22 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sino-crdc.github.io/authors/ZenMoore/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NLP 基础补充</title>
+      <link>https://sino-crdc.github.io/posts/AI/pytorch-2/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/posts/AI/pytorch-2/</guid>
+      <description>&lt;p&gt;根据塞尔认知哲学的观点，语言智能是思维智能的基础，所以个人认为 NLP 在人工智能领域的重要性是要强于 CV 的。&lt;/p&gt;
+&lt;p&gt;已经学过的 NLP 的重要模型有循环神经网络(LSTM、GRU)等，但这些都是传统的基础模型，现阶段的 NLP 离不开 attention 机制，或者说离不开 Transformer. 因为 NLP 目前 SOTA(state-of-the-art) 的模型，如 BERT、GPT-3 等，都是基于 Transformer 的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tensorboardx 可视化</title>
+      <link>https://sino-crdc.github.io/posts/AI/pytorch-3/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/posts/AI/pytorch-3/</guid>
+      <description>&lt;p&gt;根据塞尔认知哲学的观点，语言智能是思维智能的基础，所以个人认为 NLP 在人工智能领域的重要性是要强于 CV 的。&lt;/p&gt;
+&lt;p&gt;已经学过的 NLP 的重要模型有循环神经网络(LSTM、GRU)等，但这些都是传统的基础模型，现阶段的 NLP 离不开 attention 机制，或者说离不开 Transformer. 因为 NLP 目前 SOTA(state-of-the-art) 的模型，如 BERT、GPT-3 等，都是基于 Transformer 的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>模型载存、Datasets 和 数据预处理</title>
+      <link>https://sino-crdc.github.io/posts/AI/pytorch-1/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/posts/AI/pytorch-1/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;模型怎么保存？在测试或者应用是怎么使用保存好的模型？&lt;/li&gt;
+&lt;li&gt;怎么将数据集输入？或者对数据集怎么进行操作？&lt;/li&gt;
+&lt;li&gt;输入的数据往往是五花八门的，怎么对他们进行预处理，以方便训练和测试？&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

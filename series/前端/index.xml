@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端 on CRI@ÉCPKN</title>
+    <link>https://sino-crdc.github.io/series/%E5%89%8D%E7%AB%AF/</link>
+    <description>Recent content in 前端 on CRI@ÉCPKN</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy;2021 &lt;a href=&#34;https://sino.github.io/&#34;&gt;CRI@ÉCPKN&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC 4.0&lt;/a&gt; | </copyright>
+    <lastBuildDate>Thu, 20 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sino-crdc.github.io/series/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>json格式详解</title>
+      <link>https://sino-crdc.github.io/reserve/JavaScript/json/</link>
+      <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/reserve/JavaScript/json/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTML笔记-4：HTML链接、头部、CSS</title>
+      <link>https://sino-crdc.github.io/reserve/htmlcss/ht-4/</link>
+      <pubDate>Thu, 06 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/reserve/htmlcss/ht-4/</guid>
+      <description>&lt;p&gt;HTML笔记-4：链接、头部、CSS&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>HTML笔记-3：常用标签与属性</title>
+      <link>https://sino-crdc.github.io/reserve/htmlcss/ht-3/</link>
+      <pubDate>Wed, 05 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/reserve/htmlcss/ht-3/</guid>
+      <description>&lt;p&gt;HTML笔记-3：常用标签&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>JS笔记-1：JS介绍</title>
+      <link>https://sino-crdc.github.io/reserve/JavaScript/js-1/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/reserve/JavaScript/js-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css笔记-1：选择器</title>
+      <link>https://sino-crdc.github.io/reserve/htmlcss/css-1/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/reserve/htmlcss/css-1/</guid>
+      <description>&lt;p&gt;css笔记-1：选择器&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>HTML笔记-1：Web语言</title>
+      <link>https://sino-crdc.github.io/reserve/htmlcss/ht-1/</link>
+      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/reserve/htmlcss/ht-1/</guid>
+      <description>&lt;p&gt;HTML笔记-1：Web语言&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>HTML笔记-2：深入了解超文本</title>
+      <link>https://sino-crdc.github.io/reserve/htmlcss/ht-2/</link>
+      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/reserve/htmlcss/ht-2/</guid>
+      <description>&lt;p&gt;HTML笔记-2：深入了解超文本&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

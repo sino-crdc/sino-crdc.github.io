@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on CRI@ÉCPKN</title>
+    <link>https://sino-crdc.github.io/authors/</link>
+    <description>Recent content in Authors on CRI@ÉCPKN</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>&amp;copy;2021 &lt;a href=&#34;https://sino.github.io/&#34;&gt;CRI@ÉCPKN&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC 4.0&lt;/a&gt; | </copyright>
+    <lastBuildDate>Sat, 04 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sino-crdc.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>zhang</title>
+      <link>https://sino-crdc.github.io/authors/zhang/</link>
+      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/authors/zhang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zhang.Mathias</title>
+      <link>https://sino-crdc.github.io/authors/zzzsy/</link>
+      <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/authors/zzzsy/</guid>
+      <description>About me He/him Arch Linux user 汉语 / English / Français coding lover, typing Python&amp;amp;C&amp;amp;JavaScript learning html&amp;amp;css&amp;amp;js love maths though poor</description>
+    </item>
+    
+    <item>
+      <title>ZenMoore</title>
+      <link>https://sino-crdc.github.io/authors/ZenMoore/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/authors/ZenMoore/</guid>
+      <description>Vestibulum vel arcu Donec interdum justo sed posuere imperdiet. Quisque nec mauris eu erat mattis egestas in vitae nisl. Sed nisl augue, congue sed quam quis, tempor tempus nibh. Pellentesque accumsan in quam a interdum. Morbi iaculis venenatis lacinia. Mauris quis nisl vitae nisi mollis placerat id vel ligula. Integer vitae arcu ac leo iaculis rhoncus id vitae dolor. Fusce quis nisl tincidunt, vulputate dolor quis, mollis massa. Donec congue velit at risus cursus, eu auctor dolor rhoncus.</description>
+    </item>
+    
+    <item>
+      <title>Hugo Authors</title>
+      <link>https://sino-crdc.github.io/authors/example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sino-crdc.github.io/authors/example/</guid>
+      <description>Vestibulum vel arcu Donec interdum justo sed posuere imperdiet. Quisque nec mauris eu erat mattis egestas in vitae nisl. Sed nisl augue, congue sed quam quis, tempor tempus nibh. Pellentesque accumsan in quam a interdum. Morbi iaculis venenatis lacinia. Mauris quis nisl vitae nisi mollis placerat id vel ligula. Integer vitae arcu ac leo iaculis rhoncus id vitae dolor. Fusce quis nisl tincidunt, vulputate dolor quis, mollis massa. Donec congue velit at risus cursus, eu auctor dolor rhoncus.</description>
+    </item>
+    
+  </channel>
+</rss>
