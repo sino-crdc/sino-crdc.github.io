@@ -7,40 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>&amp;copy;2021 &lt;a href=&#34;https://sino.github.io/&#34;&gt;CRI@ÉCPKN&lt;/a&gt; All rights reserved. | &lt;a href=&#34;http://creativecommons.org/licenses/by-nc/4.0/&#34;&gt;CC BY-NC 4.0&lt;/a&gt; | </copyright>
-    <lastBuildDate>Sat, 04 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sino-crdc.github.io/series/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>数据结构与算法</title>
-      <link>https://sino-crdc.github.io/series/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</link>
-      <pubDate>Sat, 04 Sep 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://sino-crdc.github.io/series/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Fri, 20 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://sino-crdc.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>小程序</title>
       <link>https://sino-crdc.github.io/series/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
       <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>https://sino-crdc.github.io/series/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>前端</title>
-      <link>https://sino-crdc.github.io/series/%E5%89%8D%E7%AB%AF/</link>
-      <pubDate>Thu, 20 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://sino-crdc.github.io/series/%E5%89%8D%E7%AB%AF/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>C</title>
-      <link>https://sino-crdc.github.io/series/C/</link>
-      <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://sino-crdc.github.io/series/C/</guid>
       <description></description>
     </item>
     
